@@ -602,7 +602,7 @@ public class SchedulePopout extends javax.swing.JFrame {
                             conn = DriverManager.getConnection(DB_URL, USER, PASS);
                             Statement statement = conn.createStatement();
                             for(int counter = 1; counter <= 26; counter++){
-                                    JOptionPane.showMessageDialog(null, counter);
+                                    //JOptionPane.showMessageDialog(null, counter);
                                     String query = "UPDATE `"+ jComboBox1.getSelectedItem().toString().toLowerCase() +"` SET Schedule = '"+ Values[counter-1] +"' WHERE Counter = '"+ (counter) +"' ";
                                     statement.executeUpdate(query);
                             }
